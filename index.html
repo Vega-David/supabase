@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form id="miFormulario">
+        <label for="Nombre">Nombre</label>
+        <input type="text" name="Nombre" id="Nombre" placeholder="Nombre" required>
+        <label for="Color">Color</label>
+        <input type="text" name="Color" id="Color" placeholder="Color" required>
+        <button id="btnGuardar" type="submit">Guardar</button>
+    </form>
+                <br>
+                <a href="verdata.html" style="margin-left:10px; text-decoration:none; padding:6px 12px; background:#eee; border-radius:4px; color:#333; border:1px solid #ccc;">Ver data</a>
+
+                <script type="module" src="./supabaseModule.js"></script>
+                <script type="module">
+                    import { inicializarFormulario } from './supabaseModule.js';
+                    inicializarFormulario();
+                </script>
+
+</body>
+</html>
