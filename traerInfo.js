@@ -15,16 +15,22 @@ async function mostrarDatos() {
 		contenedor.innerHTML = '<div>No hay datos cargados.</div>';
 		return;
 	}
-	// Filtra por Color si hay filtro
+	// Filtra por Cuadrilla si hay filtro
 	const filtrados = filtro
-		? data.filter(item => (item.Color || '').toLowerCase().includes(filtro))
+		? data.filter(item => (item.Cuadrilla || '').toLowerCase().includes(filtro))
 		: data;
 	if (filtrados.length === 0) {
 		contenedor.innerHTML = '<div>No hay datos que coincidan con el filtro.</div>';
 		return;
 	}
 	filtrados.forEach(item => {
-		contenedor.innerHTML += `<div>Nombre: <b>${item.Nombre}</b> - Color: <b>${item.Color}</b></div>`;
+		contenedor.innerHTML += `<div>
+		Elemento: <b>${item.Elemento}</b> - 
+		Caracteristica: <b>${item.Caracteristica}</b> - 
+		Codigo Unico: <b>${item.codigoUnico}</b> - 
+		Estado: <b>${item.Estado}</b> - 
+		Cuadrilla: <b>${item.Cuadrilla}</b>
+		</div>`;
 	});
 }
 

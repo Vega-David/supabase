@@ -7,16 +7,50 @@
 </head>
 <body>
 
+    <h1>Relevamiento para Elementos de izaje</h1>
+
     <form id="miFormulario">
+        <h2>Datos del usuario</h2>
+        <!-- Datos del usuario -->
         <label for="Nombre">Nombre</label>
         <input type="text" name="Nombre" id="Nombre" placeholder="Nombre" required>
-        <label for="Color">Color</label>
-        <input type="text" name="Color" id="Color" placeholder="Color" required>
+        <label for="Apellido">Apellido</label>
+        <input type="text" name="Apellido" id="Apellido" placeholder="Apellido" required>
+        <label for="Documento">Documento</label>
+        <input type="number" name="Documento" id="Documento" placeholder="Documento" required>
+        <label for="Email">Email</label>
+        <input type="email" name="Email" id="Email" placeholder="Email" required>
+        
+        <h2>Datos de la cuadrilla</h2>
+        <!-- Datos de la cuadrilla -->
+        <label for="Servicio">Servicio:</label>
+            <select id="Servicio">
+        <option value="">-- Selecciona un servicio --</option>
+            </select>
+    <br><br>
+    <label for="Cuadrilla">Cuadrilla:</label>
+    <select id="Cuadrilla">
+        <option value="">-- Selecciona una cuadrilla --</option>
+    </select>
+
+        <h2>Datos del elemento</h2>
+        <!-- Datos del elemento -->
+        <label for="Elemento">Nombre del Elemento</label>
+        <input type="text" name="Elemento" id="Elemento" placeholder="Nombre del Elemento" required>
+        <label for="Caracteristica">Caracteristica</label>
+        <input type="text" name="Caracteristica" id="Caracteristica" placeholder="Caracteristicas del Elemento" required>
+        <label for="codigoUnico">Codigo Unico</label>
+        <input type="text" name="codigoUnico" id="codigoUnico" placeholder="Codigo del precinto" required>
+        <label for="Estado">Estado</label>
+        <input type="text" name="Estado" id="Estado" placeholder="Estado" required>
+
+        <!-- Boton para guardar informacion -->
         <button id="btnGuardar" type="submit">Guardar</button>
     </form>
                 <br>
                 <a href="verdata.html" style="margin-left:10px; text-decoration:none; padding:6px 12px; background:#eee; border-radius:4px; color:#333; border:1px solid #ccc;">Ver data</a>
-
+                
+                <script src="./JS/desplegables.js"></script>
                 <script type="module" src="./supabaseModule.js"></script>
                 <script type="module">
                     import { inicializarFormulario } from './supabaseModule.js';
